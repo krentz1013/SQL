@@ -1,0 +1,32 @@
+CREATE TABLE Beauty (id integer primary key, item TEXT, brand TEXT, aisle INTEGER, price INTEGER);
+
+INSERT into Beauty VALUES(1, "Eye Shadow", "Two Face", 3, 35);
+INSERT into Beauty VALUES(2, "Face Cleanser", "Image", 1, 45);
+INSERT into Beauty VALUES(3, "Eye Liner", "Makeup Forever", 3, 20);
+INSERT into Beauty VALUES(4, "Face Moisturizer", "Eminence", 2, 30);
+INSERT into Beauty VALUES(5, "Eyebrow pencil", "Anastasia Beverly Hills", 4, 45);
+INSERT into Beauty VALUES(6, "Face Exfoliator","Image", 1, 50);
+INSERT into Beauty VALUES(7, "Mascara", "Two Face", 3, 25);
+INSERT into Beauty VALUES(8, "Face Serum", "Eminence", 2, 40);
+INSERT into Beauty VALUES(9, "Liquid Eye Liner", "Makeup Forever", 3, 22);
+INSERT into Beauty VALUES(10, "Body Lotion", "Image", 1, 21);
+INSERT into Beauty VALUES(11, "Shampoo", "Treseme", 5, 15);
+INSERT into Beauty VALUES(12, "Conditioner", "Tresme", 5, 15);
+INSERT into Beauty VALUES(13, "Dry Shampoo", "Patene", 5, 12);
+INSERT into Beauty VALUES(14, "Curling Iron", "Hot Tools", 6, 150);
+INSERT into Beauty VALUES(15, "Blow Dryer", "Conair", 6, 35);
+
+--display the database ordered by price. 
+SELECT * FROM beauty
+ORDER BY price desc;
+
+--display the database ordered by aisle.
+SELECT * FROM Beauty ORDER BY aisle;
+
+--display the database where prices are less than $25, ordered by aisle.
+SELECT * FROM Beauty WHERE PRICE <25 ORDER BY aisle;
+
+--display the total price of items that are less than $25.
+SELECT SUM(price) FROM Beauty WHERE PRICE <25;
+
+
